@@ -1,0 +1,12 @@
+version: "2"
+services:
+  customer:
+    build:
+      context: .
+      dockerfile: customer/Dockerfile
+    restart: always
+    volumes:
+    - .:/go/src/github.com/msegeya56/todo-kit-microsrvice
+    container_name: customer
+    ports:
+    - 8800:8081
